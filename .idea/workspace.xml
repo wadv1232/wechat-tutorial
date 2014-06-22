@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b39f9f51-4a2a-4f7f-bff6-e327b507907a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.erb" afterPath="$PROJECT_DIR$/views/index.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="wechat-tutorial.iws" />
     <ignored path=".idea/workspace.xml" />
