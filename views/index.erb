@@ -1,9 +1,98 @@
-<html>
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/html">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->  <!--<![endif]-->
 <head>
+  <title>Our Love House</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <style type="text/css">
+      @font-face {
+          font-family: digit;
+          src: url('font/testmy.ttf') format("truetype");
+      }
+  </style>
+  <link href="styles/default.css" type="text/css" rel="stylesheet">
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/garden.js"></script>
+  <script type="text/javascript" src="js/functions.js"></script>
 </head>
+
 <body>
-<h1>
-æ¬¢è¿å…³æ³¨å…¬ä¼—è´¦å·å¼€å‘æŒ‡å—
-</h1>
+<audio src="font/happybirthday.mp3" controls="controls">
+</audio>
+
+<div id="mainDiv">
+  <div id="content">
+    <div id="code">
+      µ±ÄãÀÏÁË</br>
+      µ±ÄãÀÏÁË£¬Í·°×ÁË£¬Ë¯Òâ»è³Á£¬    </br>
+      Â¯»ğÅÔ´òíï£¬ÇëÈ¡ÏÂÕâ²¿Ê«¸è£¬    </br>
+      ÂıÂı¶Á£¬»ØÏëÄã¹ıÈ¥ÑÛÉñµÄÈáºÍ£¬  </br>
+      »ØÏëËüÃÇÎôÈÕÅ¨ÖØµÄÒõÓ°£»        </br>     </br>
+      ¶àÉÙÈË°®ÄãÇà´º»¶³©µÄÊ±³½£¬       </br>
+      °®Ä½ÄãµÄÃÀÀö£¬¼ÙÒâ»òÕæĞÄ£¬       </br>
+      Ö»ÓĞÒ»¸öÈË°®ÄãÄÇ³¯Ê¥ÕßµÄÁé»ê£¬     </br>
+      °®ÄãË¥ÀÏÁËµÄÁ³ÉÏÍ´¿àµÄÖåÎÆ£»      </br>    </br>
+      ´¹ÏÂÍ·À´£¬ÔÚºì¹âÉÁÒ«µÄÂ¯×ÓÅÔ£¬     </br>
+      ÆàÈ»µØÇáÇáËßËµÄÇ°®ÇéµÄÏûÊÅ£¬      </br>
+      ÔÚÍ·¶¥µÄÉ½ÉÏËü»º»ºõâ×Å²½×Ó£¬      </br>
+      ÔÚÒ»ÈºĞÇĞÇÖĞ¼äÒş²Ø×ÅÁ³ÅÓ¡£       </br>
+
+    </div>
+
+    <div id="loveHeart">
+      <canvas id="garden"></canvas>
+      <div id="words">
+        <div id="messages">
+          Í½¶ù£¬ÉúÈÕ¿ìÀÖ£¡
+          <div id="elapseClock"></div>
+        </div>
+        <div id="loveu">
+          Be always with you.<br/>
+          <div class="signature">- WADV1232</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="copyright">
+    Copyright @ 2014-6-24 WANG (XXX) LONG    #^_^#
+  </div>
+</div>
+<script type="text/javascript">
+    var offsetX = $("#loveHeart").width() / 2;
+    var offsetY = $("#loveHeart").height() / 2 - 55;
+    var together = new Date();
+    together.setFullYear(2013,9, 24);
+    together.setHours(23);
+    together.setMinutes(10);
+    together.setSeconds(0);
+    together.setMilliseconds(0);
+
+    if (!document.createElement('canvas').getContext) {
+        var msg = document.createElement("div");
+        msg.id = "errorMsg";
+        msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+        document.body.appendChild(msg);
+        $("#code").css("display", "none")
+        $("#copyright").css("position", "absolute");
+        $("#copyright").css("bottom", "10px");
+        document.execCommand("stop");
+    } else {
+        setTimeout(function () {
+            startHeartAnimation();
+        }, 5000);
+
+        timeElapse(together);
+        setInterval(function () {
+            timeElapse(together);
+        }, 500);
+
+        adjustCodePosition();
+        $("#code").typewriter();
+    }
+</script>
 </body>
 </html>
+

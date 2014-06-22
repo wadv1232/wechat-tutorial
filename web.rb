@@ -5,12 +5,14 @@ require './lib/content_retriever'
 require './lib/dispatcher'
 require './lib/settings'
 require './lib/picture_message_handler'
+set :public_folder, File.dirname(__FILE__) + '/static'
 
 VIEW_HANDLER = {
 	:'picture_message' => PictureMessageHandler
 }
 
 get '/' do
+ # content_type 'html','utf-8 '
   return erb :index if params['echostr'].nil?
   params['echostr']
 end
